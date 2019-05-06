@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<h1>Index page</h1>
+<a href="/createPost">Create</a>
+<ul>
+    {% for post in posts %}
+    <li>
+        <a href="/post/{{post.id}}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
